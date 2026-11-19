@@ -1386,18 +1386,19 @@ function toggleElaborationAnswer(id) {
 }
 
 
+
 function renderElaboration() {
     activityArea.innerHTML = `
         <div class="elaboration-container">
 
             <div class="elaboration-heading">
                 <h2>กิจกรรมขยายความรู้</h2>
-                <p>จงหาความยาวของด้านที่ไม่ทราบค่าในรูปสามเหลี่ยมมุมฉาก</p>
+                <p>จงหาความยาวของด้านใดด้านหนึ่งของรูปสามเหลี่ยมมุมฉาก เมื่อกำหนดความยาวของด้านอีกสองด้านให้</p>
             </div>
 
             <!-- ข้อ 1 -->
             <section class="elaboration-question">
-                <h3>ข้อ 1 จงหาความยาวของด้าน c</h3>
+                <h3>ข้อ 1 จากรูปสามเหลี่ยมมุมฉากที่กำหนดให้ จงหาค่า c</h3>
 
                 <div class="elaboration-triangle">
                     <svg viewBox="0 0 280 190">
@@ -1412,11 +1413,35 @@ function renderElaboration() {
                         <text x="157" y="72" font-size="18">c</text>
                     </svg>
                 </div>
+
+                <button class="elaboration-button"
+                    onclick="toggleElaborationAnswer('elaboration-answer-1')">
+                    กดเพื่อเปิดเฉลย
+                </button>
+
+                <div id="elaboration-answer-1" class="elaboration-answer">
+                    <h4>เฉลยข้อ 1</h4>
+                    <p><strong>ขั้นที่ 1:</strong> พิจารณารูปสามเหลี่ยมมุมฉาก</p>
+                    <p>ด้านที่ยาว 9 และ 12 เป็นด้านประกอบมุมฉาก ส่วนด้าน c เป็นด้านตรงข้ามมุมฉาก</p>
+
+                    <p><strong>ขั้นที่ 2:</strong> ใช้ทฤษฎีบทพีทาโกรัส</p>
+                    <p>c² = 9² + 12²</p>
+                    <p>c² = 81 + 144</p>
+                    <p>c² = 225</p>
+
+                    <p><strong>ขั้นที่ 3:</strong> ถอดรากที่สองทั้งสองข้าง</p>
+                    <p>c = <span class="math-root"><span>225</span></span></p>
+                    <p>c = 15</p>
+
+                    <p class="elaboration-result">
+                        ตอบ ด้าน c ยาว 15 หน่วย
+                    </p>
+                </div>
             </section>
 
             <!-- ข้อ 2 -->
             <section class="elaboration-question">
-                <h3>ข้อ 2 จงหาความยาวของด้าน b</h3>
+                <h3>ข้อ 2 จากรูปสามเหลี่ยมมุมฉากที่กำหนดให้ จงหาค่า b</h3>
 
                 <div class="elaboration-triangle">
                     <svg viewBox="0 0 280 190">
@@ -1431,11 +1456,53 @@ function renderElaboration() {
                         <text x="202" y="100" font-size="18">15</text>
                     </svg>
                 </div>
+
+                <button class="elaboration-button"
+                    onclick="toggleElaborationAnswer('elaboration-answer-2')">
+                    กดเพื่อเปิดเฉลย
+                </button>
+
+                <div id="elaboration-answer-2" class="elaboration-answer">
+                    <h4>เฉลยข้อ 2</h4>
+                    <p><strong>ขั้นที่ 1:</strong> พิจารณารูปสามเหลี่ยมมุมฉาก</p>
+                    <p>ด้านยาว 17 เป็นด้านตรงข้ามมุมฉาก ส่วนด้าน b และ 15 เป็นด้านประกอบมุมฉาก</p>
+
+                    <p><strong>ขั้นที่ 2:</strong> ใช้ทฤษฎีบทพีทาโกรัส</p>
+                    <p>17² = b² + 15²</p>
+                    <p>289 = b² + 225</p>
+                    <p>b² = 289 - 225</p>
+                    <p>b² = 64</p>
+
+                    <p><strong>ขั้นที่ 3:</strong> ถอดรากที่สองทั้งสองข้าง</p>
+                    <p>b = <span class="math-root"><span>64</span></span></p>
+                    <p>b = 8</p>
+
+                    <p class="elaboration-result">
+                        ตอบ ด้าน b ยาว 8 หน่วย
+                    </p>
+                </div>
             </section>
 
         </div>
     `;
 }
+
+/* ฟังก์ชันเปิดและปิดเฉลย */
+function toggleElaborationAnswer(id) {
+    const answer = document.getElementById(id);
+    const button = document.querySelector(
+        `[onclick="toggleElaborationAnswer('${id}')"]`
+    );
+
+    if (!answer || !button) return;
+
+    const isOpen = answer.classList.toggle("show-answer");
+
+    button.textContent = isOpen
+        ? "ปิดเฉลย"
+        : "กดเพื่อเปิดเฉลย";
+}
+
 
 
 
@@ -1669,8 +1736,7 @@ if (currentStage === 2) {
             <div class="welcome">
                 <div class="character">📐</div>
                 <h3>สวัสดีนักสำรวจ!</h3>
-                <p>เคยสังเกตไหมว่าไม้ฉากที่เราใช้เรียน
-                คณิตศาสตร์มีความพิเศษอย่างไร</p>
+                <p>เคยสังเกตไหมว่าอุปกรณ์ชิ้นหนึ่งที่เราใช้ในห้องเรียน มีความเกี่ยวข้องกับคณิตศาสตร์อย่างไร</p>
             </div>
 
             <div class="question-box">
@@ -1807,7 +1873,7 @@ function renderExplanation() {
 
                     <p class="explanation-intro">
                         กำหนด ABC เป็นรูปสามเหลี่ยมมุมฉาก
-                        ที่มีมุม ACB เป็นมุมฉาก ดังรูป
+                        ที่มีมุม C เป็นมุมฉาก ดังรูป
                     </p>
 
                     <div class="explanation-triangle">

@@ -641,3 +641,78 @@ footer {
     padding: 0 2px 0 1px;
     margin-left: -2px;
 }
+
+
+/* ===== เฉลยขั้นขยายความรู้ ===== */
+
+.elaboration-answer {
+    display: none;
+    background: #eff8ff;
+    border-left: 4px solid #2478c7;
+    border-radius: 10px;
+    padding: 18px 22px;
+    margin-top: 15px;
+    line-height: 1.9;
+}
+
+.elaboration-answer.show-answer {
+    display: block;
+}
+
+.elaboration-answer h4 {
+    color: #176b50;
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.elaboration-answer p {
+    margin: 5px 0;
+}
+
+.elaboration-result {
+    color: #176b50;
+    font-weight: bold;
+    margin-top: 12px !important;
+    padding: 9px 12px;
+    background: #e3f5eb;
+    border-radius: 8px;
+}
+
+.elaboration-button {
+    display: block;
+    margin: 15px auto;
+    padding: 11px 25px;
+    border: none;
+    border-radius: 8px;
+    background: #2478c7;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.elaboration-button:hover {
+    background: #185b9b;
+}
+
+/* รูปแบบเครื่องหมายรากที่สอง */
+.math-root {
+    display: inline-flex;
+    align-items: flex-start;
+    position: relative;
+    margin-left: 4px;
+    padding-top: 2px;
+    font-size: 18px;
+}
+
+.math-root::before {
+    content: "√";
+    font-size: 23px;
+    line-height: 1;
+    margin-right: 1px;
+}
+
+.math-root span {
+    border-top: 1.5px solid currentColor;
+    padding: 1px 5px 0 2px;
+    line-height: 1.2;
+}

@@ -716,3 +716,101 @@ footer {
     padding: 1px 5px 0 2px;
     line-height: 1.2;
 }
+
+
+/* ===== จัดสมการผลบวกเป็น 4 บรรทัด ===== */
+
+.sum-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 10px;
+}
+
+.sum-grid-row {
+    display: grid;
+    grid-template-columns: 32px minmax(65px, 1fr) 28px minmax(65px, 1fr);
+    align-items: center;
+    justify-items: center;
+    column-gap: 8px;
+    width: min(100%, 440px);
+    min-height: 48px;
+}
+
+.sum-equals {
+    grid-column: 1;
+    justify-self: center;
+    font-size: 22px;
+    color: #245b91;
+}
+
+.sum-term {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    min-width: 0;
+}
+
+.sum-operator {
+    font-size: 22px;
+    color: #245b91;
+}
+
+.sum-final {
+    grid-column: 2 / 5;
+    justify-self: center;
+}
+
+.sum-grid-row sup {
+    font-size: 13px;
+    font-weight: bold;
+    color: #245b91;
+    align-self: flex-start;
+    margin-top: 2px;
+}
+
+
+
+@media (max-width: 480px) {
+    .sum-grid-row {
+        grid-template-columns: 24px 90px 20px 90px;
+        column-gap: 5px;
+    }
+
+    .sum-grid {
+        padding: 14px 4px;
+        gap: 9px;
+    }
+
+    /* ช่องเลือกด้านและช่องกรอกตัวเลขให้เท่ากัน */
+    .sum-grid .sum-term input,
+    .sum-grid .sum-term select {
+        width: 90px;
+        min-width: 90px;
+        max-width: 90px;
+        height: 46px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 17px;
+        padding: 5px;
+    }
+
+    /* ช่องคำตอบสุดท้ายให้เต็มความกว้างของพื้นที่สองช่อง */
+    .sum-grid .sum-final {
+        grid-column: 2 / 5;
+        width: 100%;
+    }
+
+    .sum-grid .sum-final input {
+        width: 100%;
+        min-width: 0;
+        height: 46px;
+        box-sizing: border-box;
+        text-align: center;
+        font-size: 17px;
+    }
+}
+
+

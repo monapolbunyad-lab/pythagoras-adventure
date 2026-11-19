@@ -826,32 +826,69 @@ function renderExploration() {
 
                     <h4>ผลบวกของกำลังสองของความยาวด้านประกอบมุมฉาก</h4>
 
-                    <div class="answer-group">
 
-                        <div class="sum-line">
-                            ${sideSelect("sumNameA", exploration.sumNames[0], exploration.sumDone)}
-                            <sup>2</sup>
-                            <b>+</b>
-                            ${sideSelect("sumNameB", exploration.sumNames[1], exploration.sumDone)}
-                            <sup>2</sup>
-                            <b>=</b>
-                            ${numberInput("sumLengthA", exploration.sumLengths[0], exploration.sumDone)}
-                            <sup>2</sup>
-                            <b>+</b>
-                            ${numberInput("sumLengthB", exploration.sumLengths[1], exploration.sumDone)}
-                            <sup>2</sup>
-                        </div>
+<div class="answer-group sum-grid">
 
-                        <div class="sum-line sum-line-result">
-                            <b>=</b>
-                            ${numberInput("sumSquareA", exploration.sumSquares[0], exploration.sumDone)}
-                            <b>+</b>
-                            ${numberInput("sumSquareB", exploration.sumSquares[1], exploration.sumDone)}
-                            <b>=</b>
-                            ${numberInput("sumAnswer", exploration.sumValue, exploration.sumDone)}
-                        </div>
+    <!-- บรรทัดที่ 1: ตัวแปรกำลังสอง -->
+    <div class="sum-grid-row">
+        <span class="sum-equals"></span>
 
-                    </div>
+        <div class="sum-term">
+            ${sideSelect("sumNameA", exploration.sumNames[0], exploration.sumDone)}
+            <sup>2</sup>
+        </div>
+
+        <b class="sum-operator">+</b>
+
+        <div class="sum-term">
+            ${sideSelect("sumNameB", exploration.sumNames[1], exploration.sumDone)}
+            <sup>2</sup>
+        </div>
+    </div>
+
+    <!-- บรรทัดที่ 2: แทนค่าความยาวด้าน -->
+    <div class="sum-grid-row">
+        <b class="sum-equals">=</b>
+
+        <div class="sum-term">
+            ${numberInput("sumLengthA", exploration.sumLengths[0], exploration.sumDone)}
+            <sup>2</sup>
+        </div>
+
+        <b class="sum-operator">+</b>
+
+        <div class="sum-term">
+            ${numberInput("sumLengthB", exploration.sumLengths[1], exploration.sumDone)}
+            <sup>2</sup>
+        </div>
+    </div>
+
+    <!-- บรรทัดที่ 3: คำนวณกำลังสอง -->
+    <div class="sum-grid-row">
+        <b class="sum-equals">=</b>
+
+        <div class="sum-term">
+            ${numberInput("sumSquareA", exploration.sumSquares[0], exploration.sumDone)}
+        </div>
+
+        <b class="sum-operator">+</b>
+
+        <div class="sum-term">
+            ${numberInput("sumSquareB", exploration.sumSquares[1], exploration.sumDone)}
+        </div>
+    </div>
+
+    <!-- บรรทัดที่ 4: ผลลัพธ์ -->
+    <div class="sum-grid-row">
+        <b class="sum-equals">=</b>
+
+        <div class="sum-final">
+            ${numberInput("sumAnswer", exploration.sumValue, exploration.sumDone)}
+        </div>
+    </div>
+
+</div>
+
 
                     ${!exploration.sumDone ? `
                         <button class="check-button" onclick="checkSum()">
@@ -1508,7 +1545,7 @@ function toggleElaborationAnswer(id) {
 
 const assessmentQuestions = [
     {
-        title: "ข้อ 1 จงเลือกสมการที่แสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉากได้ถูกต้อง",
+        title: "ข้อ 1 ข้อใดเขียนสมการที่แสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉากได้ถูกต้อง",
         diagram: `
             <svg viewBox="0 0 240 150">
                 <path d="M45 15 L45 115 L190 115 Z" fill="none" stroke="#333" stroke-width="2.5"/>
@@ -1527,7 +1564,7 @@ const assessmentQuestions = [
         explanation: "ด้าน b เป็นด้านตรงข้ามมุมฉาก จึงเป็นด้านที่ยาวที่สุดและต้องยกกำลังสองเท่ากับผลบวกของกำลังสองของอีกสองด้าน ดังนั้น b² = a² + c²"
     },
     {
-        title: "ข้อ 2 จงเลือกสมการที่แสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉากได้ถูกต้อง",
+        title: "ข้อ 2 ข้อใดเขียนสมการที่แสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉากได้ถูกต้อง",
         diagram: `
             <svg viewBox="0 0 240 150">
                 <path d="M35 115 L165 115 L165 15 Z" fill="none" stroke="#333" stroke-width="2.5"/>
@@ -1546,7 +1583,7 @@ const assessmentQuestions = [
         explanation: "ด้าน x เป็นด้านตรงข้ามมุมฉาก จึงเป็นด้านตรงข้ามมุมฉาก ดังนั้น x² = y² + z²"
     },
     {
-        title: "ข้อ 3 จงเลือกสมการที่แสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉากได้ถูกต้อง",
+        title: "ข้อ 3 ข้อใดเขียนสมการที่แสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉากได้ถูกต้อง",
         diagram: `
             <svg viewBox="0 0 240 150">
                 <path d="M35 35 L165 35 L165 125 Z" fill="none" stroke="#333" stroke-width="2.5"/>
@@ -1565,7 +1602,7 @@ const assessmentQuestions = [
         explanation: "ด้าน k อยู่ตรงข้ามมุมฉาก จึงเป็นด้านตรงข้ามมุมฉาก ใช้ทฤษฎีบทพีทาโกรัสได้ว่า k² = 4² + 3²"
     },
     {
-        title: "ข้อ 4 จงเลือกสมการที่แสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉาก ABC ได้ถูกต้อง",
+        title: "ข้อ 4 ข้อใดเขียนสมการที่แสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉาก ABC ได้ถูกต้อง",
         diagram: `
             <svg viewBox="0 0 240 150">
                 <path d="M35 120 L115 18 L205 120 Z" fill="none" stroke="#333" stroke-width="2.5"/>
@@ -1585,7 +1622,7 @@ const assessmentQuestions = [
     },
     
     {
-        title: "ข้อ 5 จงเลือกสมการที่แสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉากได้ถูกต้อง",
+        title: "ข้อ 5 ข้อใดเขียนสมการที่แสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉากได้ถูกต้อง",
         diagram: `
             <svg viewBox="0 0 240 150">
                 <path d="M35 75 L145 25 L175 125 Z"
@@ -1619,7 +1656,7 @@ function renderAssessment() {
         <div class="assessment-container">
             <div class="assessment-heading">
                 <h2>ขั้นที่ 5 ประเมินผล</h2>
-                <p>แบบทดสอบเรื่องทฤษฎีบทพีทาโกรัส</p>
+                <p>แบบทดสอบ เรื่อง การเขียนสมการแสดงความสัมพันธ์ระหว่างความยาวของด้านทั้งสามของรูปสามเหลี่ยมมุมฉาก</p>
                 <div class="assessment-total">คะแนนเต็ม 5 คะแนน</div>
                 <p>เลือกคำตอบที่ถูกต้องที่สุดเพียงข้อเดียว</p>
             </div>

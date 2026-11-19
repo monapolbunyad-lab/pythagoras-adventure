@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pythagoras Adventure</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-icon">📐</span>
+            <span>PYTHAGORAS <b>ADVENTURE</b></span>
+        </div>
+        <div class="student-info">🎒 นักสำรวจคณิตศาสตร์</div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="hero-text">
+                <span class="tag">✨ MATHEMATICS ADVENTURE</span>
+                <h1>Pythagoras Adventure</h1>
+                <h2>ผจญภัยไปกับพีทาโกรัส</h2>
+                <p>ออกเดินทางค้นพบความลับของสามเหลี่ยมมุมฉาก<br>
+                ผ่านภารกิจสนุก ๆ ทั้ง 5 ด่านการเรียนรู้</p>
+                <p class="hero-credit">
+    โดย นางสาวลัมมุณา พลบัญญัติ
+</p>
+            </div>
+            <div class="hero-art">📐</div>
+        </section>
+
+        <section class="progress-section">
+            <div class="progress-heading">
+                <span>เส้นทางการผจญภัย</span>
+                <span id="progressText">0 / 5 ด่าน</span>
+            </div>
+
+            <div class="progress-track">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+
+            <div class="stage-list">
+                <button class="stage active" data-stage="0">
+                    <span>💡</span>
+                    <small>Engagement</small>
+                    <b>สร้างความสนใจ</b>
+                </button>
+                <button class="stage locked" data-stage="1">
+                    <span>🔍</span>
+                    <small>Exploration</small>
+                    <b>สำรวจและค้นหา</b>
+                </button>
+                <button class="stage locked" data-stage="2">
+                    <span>🧠</span>
+                    <small>Explanation</small>
+                    <b>อธิบายและสรุป</b>
+                </button>
+                <button class="stage locked" data-stage="3">
+                    <span>🚀</span>
+                    <small>Elaboration</small>
+                    <b>ขยายความรู้</b>
+                </button>
+                <button class="stage locked" data-stage="4">
+                    <span>🏆</span>
+                    <small>Evaluation</small>
+                    <b>ประเมินผล</b>
+                </button>
+            </div>
+        </section>
+
+        <section class="lesson-card">
+            <div class="lesson-heading">
+                <div>
+                    <span class="tag" id="stageTag">STAGE 01</span>
+                    <h2 id="stageTitle">💡 สร้างความสนใจ</h2>
+                    <p id="stageDescription">เตรียมตัวให้พร้อม แล้วออกเดินทางกันเลย!</p>
+                </div>
+            </div>
+
+            <div id="activityArea" class="activity-area">
+                <!-- JavaScript จะนำกิจกรรมมาแสดงตรงนี้ -->
+            </div>
+
+            <div class="navigation">
+                <button class="btn btn-back" id="backBtn" disabled>
+                    ← ย้อนกลับ
+                </button>
+                <button class="btn btn-next" id="nextBtn">
+                    เริ่มภารกิจสำรวจ →
+                </button>
+            </div>
+        </section>
+
+        <footer>
+            <p>📐 Pythagoras Adventure | สื่อการเรียนรู้คณิตศาสตร์</p>
+            <p>เรียนรู้ด้วยตนเอง สนุกกับการค้นพบ</p>
+        </footer>
+
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -776,7 +776,7 @@ function renderExploration() {
 
                 ${exploration.lengthsDone ? `
                     <hr class="explorer-divider">
-                    <h4>กำลังสองของความยาวด้าน</h4>
+                    <h4>กำลังสองของความยาวของด้าน</h4>
 
                     <div class="answer-group">
                         <div class="answer-group-title">

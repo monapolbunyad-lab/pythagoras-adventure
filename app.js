@@ -1435,7 +1435,7 @@ function renderElaboration() {
 
             <!-- ข้อ 1 -->
             <section class="elaboration-question">
-                <h3>ข้อ 1 จากรูปสามเหลี่ยมมุมฉากที่กำหนดให้ จงหาค่า c</h3>
+                <h3>ข้อ 1 จากรูปสามเหลี่ยมมุมฉากที่กำหนดให้ จงหาความยาวของ c</h3>
 
                 <div class="elaboration-triangle">
                     <svg viewBox="0 0 280 190">
@@ -1478,7 +1478,7 @@ function renderElaboration() {
 
             <!-- ข้อ 2 -->
             <section class="elaboration-question">
-                <h3>ข้อ 2 จากรูปสามเหลี่ยมมุมฉากที่กำหนดให้ จงหาค่า b</h3>
+                <h3>ข้อ 2 จากรูปสามเหลี่ยมมุมฉากที่กำหนดให้ จงหาความยาวของ b</h3>
 
                 <div class="elaboration-triangle">
                     <svg viewBox="0 0 280 190">

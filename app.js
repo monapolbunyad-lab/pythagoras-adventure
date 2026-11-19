@@ -624,7 +624,7 @@ function renderPuzzle() {
             </div>
 
             <p class="puzzle-instruction">
-                เครื่องหมายเท่ากับกำหนดไว้แล้ว เลือกจิ๊กซอว์มาเติมสมการให้ถูกต้อง
+                
             </p>
 
             <div class="puzzle-bank">

@@ -698,8 +698,8 @@ function renderExploration() {
                     </div>
 
                     <p>
-                        กำลังสองของด้านตรงข้ามมุมฉาก
-                        เท่ากับผลบวกของกำลังสองของด้านประกอบมุมฉาก
+                        กำลังสองของความยาวของด้านตรงข้ามมุมฉาก
+                        เท่ากับผลบวกของกำลังสองของความยาวของด้านประกอบมุมฉาก
                     </p>
                 </div>
             ` : ""}
@@ -780,7 +780,7 @@ function renderExploration() {
 
                     <div class="answer-group">
                         <div class="answer-group-title">
-                            กำลังสองของด้านประกอบมุมฉาก
+                            กำลังสองของความยาวของด้านประกอบมุมฉาก
                         </div>
 
                         <div class="square-answer-line">
@@ -802,7 +802,7 @@ function renderExploration() {
 
                     <div class="answer-group">
                         <div class="answer-group-title">
-                            กำลังสองของด้านตรงข้ามมุมฉาก
+                            กำลังสองของความยาวของด้านตรงข้ามมุมฉาก
                         </div>
 
                         <div class="square-answer-line">

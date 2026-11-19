@@ -6,10 +6,10 @@
 
 const stages = [
     { title: "💡 สร้างความสนใจ", description: "" },
-    { title: "🔍 สำรวจและค้นหา", description: "ทดลองสำรวจความสัมพันธ์ของด้านทั้งสาม" },
-    { title: "🧠 อธิบายและลงข้อสรุป", description: "สร้างสมการพีทาโกรัสด้วยตนเอง" },
-    { title: "🚀 ขยายความรู้", description: "นำความรู้ไปแก้ปัญหาในชีวิตจริง" },
-    { title: "🏆 ประเมินผล", description: "ทดสอบความเข้าใจของนักสำรวจ" }
+    { title: "🔍 สำรวจและค้นหา", description: "" },
+    { title: "🧠 อธิบายและลงข้อสรุป", description: "" },
+    { title: "🚀 ขยายความรู้", description: "" },
+    { title: "🏆 ประเมินผล", description: "" }
 ];
 
 let currentStage = 0;

@@ -1797,22 +1797,22 @@ if (currentStage === 2) {
             </div>
 
             <div class="question-box">
-                <b>คำถามที่ 3 : สามเหลี่ยมมุมฉากมีลักษณะอย่างไร</b><br>
+                <b>คำถามที่ 3 : สามเหลี่ยมมุมฉากภาษาอังกฤษเรียกว่าอะไร</b><br>
                 <button class="reveal-btn" onclick="reveal(2)">
                     👀 กดเพื่อดูคำตอบ
                 </button>
                 <div class="answer" id="answer2">
-                    คำตอบ: มีมุมมุมหนึ่ง มีขนาด 90 องศา และมีด้านสามด้าน มุมภายในของรูปสามเหลี่ยม รวมกัน 180 องศา
+                    คำตอบ:  Right-angled triangle
                 </div>
             </div>
 
             <div class="question-box">
-                <b>คำถามที่ 4 : สามเหลี่ยมมุมฉากภาษาอังกฤษเรียกว่าอะไร</b><br>
+                <b>คำถามที่ 4 : สามเหลี่ยมมุมฉากมีลักษณะอย่างไร</b><br>
                 <button class="reveal-btn" onclick="reveal(3)">
                     👀 กดเพื่อดูคำตอบ
                 </button>
                 <div class="answer" id="answer3">
-                    คำตอบ: Right-angled triangle
+                    คำตอบ: มีมุมมุมหนึ่ง มีขนาด 90 องศา และมีด้านสามด้าน มุมภายในของรูปสามเหลี่ยม รวมกัน 180 องศา
                 </div>
             </div>
 

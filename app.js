@@ -1807,7 +1807,7 @@ if (currentStage === 2) {
             </div>
 
             <div class="question-box">
-                <b>คำถามที่ 4 : ภาษาอังกฤษเรียกว่าอะไร</b><br>
+                <b>คำถามที่ 4 : สามเหลี่ยมมุมฉากภาษาอังกฤษเรียกว่าอะไร</b><br>
                 <button class="reveal-btn" onclick="reveal(3)">
                     👀 กดเพื่อดูคำตอบ
                 </button>
